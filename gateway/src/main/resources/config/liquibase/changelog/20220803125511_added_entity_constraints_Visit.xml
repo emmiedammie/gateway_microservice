@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Visit.
+    -->
+    <changeSet id="20220803125511-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="rota_id"
+                                 baseTableName="visit"
+                                 constraintName="fk_visit__rota_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rota"/>
+    </changeSet>
+</databaseChangeLog>

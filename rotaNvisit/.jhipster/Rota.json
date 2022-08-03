@@ -1,0 +1,47 @@
+{
+  "applications": ["gateway", "rotaNvisit"],
+  "changelogDate": "20220803125211",
+  "clientRootFolder": "rotaNvisit",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "rota",
+  "fields": [
+    {
+      "fieldName": "client",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "carer",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "time",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Duration",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "rotaNvisit",
+  "name": "Rota",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "visit",
+      "otherEntityRelationshipName": "rota",
+      "ownerSide": false,
+      "relationshipName": "visit",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

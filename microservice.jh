@@ -1,0 +1,80 @@
+
+application {
+  config {
+    baseName gateway,
+    applicationType gateway,
+    packageName com.auth0.gateway,
+    prodDatabaseType mariadb,
+    clientFramework react
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName admin,
+    applicationType microservice,
+    packageName com.auth0.admin,
+    prodDatabaseType mariadb,
+  }
+  entities Client, Carer
+}
+
+application {
+  config {
+    baseName rotaNvisit,
+    applicationType microservice,
+    packageName com.auth0.visit,
+    prodDatabaseType mariadb,
+  }
+  entities Visit, Rota
+}
+
+entity Carer {
+	name String required
+    phone Long
+    daysavailable Days required
+}
+
+entity Client {
+	name String required
+    phone Long
+    age Integer required max(200)
+    address String required
+    accesscode Integer required
+    task String
+    carerassigned String required
+}
+
+entity Rota {
+	client String required
+    carer String required
+    time Instant required
+    duration Duration required
+}
+
+entity Visit {
+	client String required
+    address String required
+    carer String required
+    accesscode Integer required
+    timein Instant required
+    status Status required
+    timespent Duration required
+}
+
+enum Status {
+    PENDING, COMPLETED, UNCOMPLETED
+}
+enum Days {
+	MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
+relationship OneToOne {
+  Visit{rota} to Rota{visit}
+
+}
+
+relationship OneToMany {
+  Client{carer(name)} to Carer
+}
+   
