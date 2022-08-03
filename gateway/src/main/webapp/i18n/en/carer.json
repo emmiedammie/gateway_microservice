@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "carer": {
+      "home": {
+        "title": "Carers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Carer",
+        "createOrEditLabel": "Create or edit a Carer",
+        "notFound": "No Carers found"
+      },
+      "created": "A new Carer is created with identifier {{ param }}",
+      "updated": "A Carer is updated with identifier {{ param }}",
+      "deleted": "A Carer is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Carer {{ id }}?"
+      },
+      "detail": {
+        "title": "Carer"
+      },
+      "id": "ID",
+      "name": "Name",
+      "phone": "Phone",
+      "daysavailable": "Daysavailable",
+      "client": "Client"
+    }
+  }
+}

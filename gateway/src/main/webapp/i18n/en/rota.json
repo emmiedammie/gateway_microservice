@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "rota": {
+      "home": {
+        "title": "Rotas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rota",
+        "createOrEditLabel": "Create or edit a Rota",
+        "notFound": "No Rotas found"
+      },
+      "created": "A new Rota is created with identifier {{ param }}",
+      "updated": "A Rota is updated with identifier {{ param }}",
+      "deleted": "A Rota is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rota {{ id }}?"
+      },
+      "detail": {
+        "title": "Rota"
+      },
+      "id": "ID",
+      "client": "Client",
+      "carer": "Carer",
+      "time": "Time",
+      "duration": "Duration",
+      "visit": "Visit"
+    }
+  }
+}
